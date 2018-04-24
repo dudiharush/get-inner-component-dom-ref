@@ -20,10 +20,8 @@ class App extends React.Component {
   render() {
     return (
       <div style={styles}>
-        <InnerComponent
-          height={"" + this.divRef.clientHeight}
-          divRef={el => (this.divRef = el)}
-        />
+        <InnerComponent divRef={el => (this.divRef = el)} />
+        <div>inner component height: {this.divRef.clientHeight}px</div>
       </div>
     );
   }
